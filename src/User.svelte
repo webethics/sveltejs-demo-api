@@ -45,7 +45,6 @@
 
   function saveUser(event) {
     axios.post('create.php', event.detail.user).then(response => {
-      console.log(response.data.id);
         if (response.data.id) {
             users = [...users, response.data];
             message = 'New User Added Successfully!';
